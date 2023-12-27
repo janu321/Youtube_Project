@@ -186,9 +186,9 @@ def load_mongo_data_into_sql():
 # loop to execute all channel id
 def main():
     channel_id_list=["UCWetQ9ZanDSdHQVKNIjKrsg","UC9pRPRlo6wIOakEOi_2RWwA","UC2J_VKrAzOEJuQvFFtj3KUw",
-                     "UCCj956IF62FbT7Gouszaj9w","UCBnxEdpoZwstJqC1yZpOjRA",
-                                                "UCd3SZzlH4rzgvrcxiCV5r8Q",
-                     "UC1sAQpHqHy4SV6ZSu98xGmg","UCMSI1Ck1mJOaxxwJ0bzrYhQ"]
+                     "UCCj956IF62FbT7Gouszaj9w","UCBnxEdpoZwstJqC1yZpOjRA","UC1sAQpHqHy4SV6ZSu98xGmg",
+                     "UC5rGGthSt-CQue8V0bj1bWg","UCSbUX_gKMur5FPcTbH2L5mA","UCUm1CHJ4gsdMoLiZhHPq1gA"]
+
     for channel_id in channel_id_list:
         mongodata= get_all_youtube_data(channel_id)
         # print(mongodata)
@@ -222,14 +222,14 @@ def display_channel_info(selected_option):
         channel_id = "UCBnxEdpoZwstJqC1yZpOjRA"
     elif selected_option == "VB Dace Store":
         channel_id = "UCWetQ9ZanDSdHQVKNIjKrsg"
-    elif selected_option == "The Urban Fight":
-        channel_id = "UCMSI1Ck1mJOaxxwJ0bzrYhQ"
-    elif selected_option == "Moviebuff Malayalam":
-        channel_id = "UCd3SZzlH4rzgvrcxiCV5r8Q"
     elif selected_option == "Times Of India":
         channel_id = "UC1sAQpHqHy4SV6ZSu98xGmg"
-    # elif selected_option == "Error Makes Clever Academy":
-    #     channel_id = "UCwr-evhuzGZgDFrq_1pLt_A"
+    elif selected_option == "Galatta Tamil":
+        channel_id = "UCSbUX_gKMur5FPcTbH2L5mA"
+    elif selected_option == "Divo Music":
+        channel_id = "UC5rGGthSt-CQue8V0bj1bWg"
+    elif selected_option == "Title Talks":
+        channel_id = "UCUm1CHJ4gsdMoLiZhHPq1gA"
 
     return channel_id
 
@@ -252,8 +252,8 @@ if st.button('Get youtube data '):
 
 st.write('#### :blue[Choose any channel from the below list and get their channel information ]\n')
 
-options = ['MG x PODCAST', 'Chennai Super Kings', 'BBC','Sun TV','VB Dace Store','The Urban Fight',
-           'Moviebuff Malayalam','Times Of India','Dr Pal']
+options = ['MG x PODCAST', 'Chennai Super Kings', 'BBC','Sun TV','VB Dace Store','Times Of India',
+           'Galatta Tamil','Title Talks','Divo Music']
 selected_option = st.selectbox(f'## :blue[Channel Names]',options,placeholder="Choose an option")
 
 if st.button('Execute'):
